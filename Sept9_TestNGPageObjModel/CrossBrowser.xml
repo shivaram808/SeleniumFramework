@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+
+	  <test name="Chrome">
+	  <parameter name="Browser" value="Chrome"/>
+	  <classes>
+	  <class name="reusables.CRbrowser_BaseClass"/>
+	   </classes>
+	  </test> <!-- Test -->
+	  
+	    <test name="Firefox">
+	  <parameter name="Browser" value="Firefox"/>
+	  <classes>
+	  <class name="reusables.CRbrowser_BaseClass"/>
+	   </classes>
+	  </test> <!-- Test -->
+	  
+	    <test name="IE">
+	  <parameter name="Browser" value="IE"/>
+	  <classes>
+	  <class name="reusables.CRbrowser_BaseClass"/>
+	   </classes>
+	  </test> <!-- Test -->
+	  
+</suite> <!-- Suite -->
