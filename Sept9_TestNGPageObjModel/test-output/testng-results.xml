@@ -2,44 +2,44 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="736" started-at="2017-09-21T13:43:14Z" finished-at="2017-09-21T13:43:15Z">
+  <suite name="Suite" duration-ms="208" started-at="2017-09-22T07:33:55Z" finished-at="2017-09-22T07:33:56Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="736" started-at="2017-09-21T13:43:14Z" finished-at="2017-09-21T13:43:15Z">
+    <test name="Test" duration-ms="208" started-at="2017-09-22T07:33:55Z" finished-at="2017-09-22T07:33:56Z">
       <class name="testcases.OpenandcloseBrowser">
-        <test-method status="PASS" signature="Beforesuite()[pri:0, instance:testcases.OpenandcloseBrowser@685cb137]" name="Beforesuite" is-config="true" duration-ms="22932" started-at="2017-09-21T19:12:51Z" finished-at="2017-09-21T19:13:14Z">
+        <test-method status="PASS" signature="Beforesuite()[pri:0, instance:testcases.OpenandcloseBrowser@6a4f787b]" name="Beforesuite" is-config="true" duration-ms="14107" started-at="2017-09-22T13:03:41Z" finished-at="2017-09-22T13:03:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Beforesuite -->
-        <test-method status="PASS" signature="Aftersuite()[pri:0, instance:testcases.OpenandcloseBrowser@685cb137]" name="Aftersuite" is-config="true" duration-ms="8060" started-at="2017-09-21T19:13:15Z" finished-at="2017-09-21T19:13:23Z">
+        <test-method status="PASS" signature="Aftersuite()[pri:0, instance:testcases.OpenandcloseBrowser@6a4f787b]" name="Aftersuite" is-config="true" duration-ms="3421" started-at="2017-09-22T13:03:56Z" finished-at="2017-09-22T13:03:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Aftersuite -->
       </class> <!-- testcases.OpenandcloseBrowser -->
       <class name="testcases.HomePageTitle">
-        <test-method status="PASS" signature="verify_HPTitle()[pri:0, instance:testcases.HomePageTitle@6a41eaa2]" name="verify_HPTitle" duration-ms="114" started-at="2017-09-21T19:13:14Z" finished-at="2017-09-21T19:13:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_HPTitle -->
-        <test-method status="PASS" signature="before()[pri:0, instance:testcases.HomePageTitle@6a41eaa2]" name="before" is-config="true" duration-ms="0" started-at="2017-09-21T19:13:14Z" finished-at="2017-09-21T19:13:14Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:testcases.HomePageTitle@685cb137]" name="before" is-config="true" duration-ms="0" started-at="2017-09-22T13:03:55Z" finished-at="2017-09-22T13:03:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="After()[pri:0, instance:testcases.HomePageTitle@6a41eaa2]" name="After" is-config="true" duration-ms="0" started-at="2017-09-21T19:13:14Z" finished-at="2017-09-21T19:13:14Z">
+        <test-method status="PASS" signature="verify_HPTitle()[pri:0, instance:testcases.HomePageTitle@685cb137]" name="verify_HPTitle" duration-ms="41" started-at="2017-09-22T13:03:55Z" finished-at="2017-09-22T13:03:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_HPTitle -->
+        <test-method status="PASS" signature="After()[pri:0, instance:testcases.HomePageTitle@685cb137]" name="After" is-config="true" duration-ms="1" started-at="2017-09-22T13:03:55Z" finished-at="2017-09-22T13:03:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- After -->
       </class> <!-- testcases.HomePageTitle -->
       <class name="testcases.HomePageHeader">
-        <test-method status="PASS" signature="verify_HPHeader()[pri:0, instance:testcases.HomePageHeader@7cd62f43]" name="verify_HPHeader" duration-ms="589" started-at="2017-09-21T19:13:14Z" finished-at="2017-09-21T19:13:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_HPHeader -->
-        <test-method status="PASS" signature="before()[pri:0, instance:testcases.HomePageHeader@7cd62f43]" name="before" is-config="true" duration-ms="0" started-at="2017-09-21T19:13:14Z" finished-at="2017-09-21T19:13:14Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:testcases.HomePageHeader@6a41eaa2]" name="before" is-config="true" duration-ms="1" started-at="2017-09-22T13:03:55Z" finished-at="2017-09-22T13:03:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="After()[pri:0, instance:testcases.HomePageHeader@7cd62f43]" name="After" is-config="true" duration-ms="0" started-at="2017-09-21T19:13:15Z" finished-at="2017-09-21T19:13:15Z">
+        <test-method status="PASS" signature="verify_HPHeader()[pri:0, instance:testcases.HomePageHeader@6a41eaa2]" name="verify_HPHeader" duration-ms="138" started-at="2017-09-22T13:03:55Z" finished-at="2017-09-22T13:03:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_HPHeader -->
+        <test-method status="PASS" signature="After()[pri:0, instance:testcases.HomePageHeader@6a41eaa2]" name="After" is-config="true" duration-ms="1" started-at="2017-09-22T13:03:56Z" finished-at="2017-09-22T13:03:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- After -->
