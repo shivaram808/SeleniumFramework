@@ -33,10 +33,20 @@ public class HomePageTitle extends BaseClass{
 		String Act_Title = hp.HP_Title();
 		String Exp_Title = "Automation Techno - Home";
 		
-		st.assertEquals(Exp_Title, Act_Title,"Tite is incorrect!!");
-		logger.log(LogStatus.PASS,"Home page title verified  :  "+Act_Title);			
-		st.assertAll();
+		if(Exp_Title.equalsIgnoreCase(Act_Title))
+		{
 		
+		logger.log(LogStatus.PASS,"Home page title verified  :  "+Act_Title);			
+		
+		}
+		else
+			
+			{
+			
+			logger.log(LogStatus.FAIL,"Incorrect title on the page :  "+Act_Title);			
+			
+			}
+			
 		}
 	
 @AfterMethod

@@ -29,8 +29,9 @@ public class HomePageHeader extends BaseClass{
 	public void verify_HPHeader()
 	{	
 		pageObjects.HomePage hp = PageFactory.initElements(driver,pageObjects.HomePage.class);
-	String Act_Header = hp.HP_Header();
-	String Exp_Header = "AUTOMATION TECHNO";
+	
+		String Act_Header = hp.HP_Header();
+		String Exp_Header = "AUTOMATION TECHNO";
 
 		if(Exp_Header.equalsIgnoreCase(Act_Header))
 		{

@@ -1,34 +1,32 @@
 package reusables;
 
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Properties;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-
-import org.testng.asserts.SoftAssert;
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import xls.ShineXlsReader;
+
 
 public class BaseClass {
 	
 	public static WebDriver driver;
+	public static File src;
 	public static FileInputStream fis;
 	public static Properties prop;
-	public static SoftAssert st;
-	public static ShineXlsReader xls;
 	public static Hashtable<String,String> ht;
 	public static ExtentReports report;
 	public static ExtentTest logger ;
-	public static void initializedriver() throws IOException 
+	public static void initializedriver() throws Exception 
 	{
 	
 		report =new ExtentReports("C:\\Users\\Shiva Ram\\workspaceEXT\\Sept9_TestNGPageObjModel\\Test_IP_OP\\Report.html");
@@ -37,7 +35,7 @@ public class BaseClass {
 		prop = new Properties();
 		prop.load(fis);
 		String browser = prop.getProperty("Browser");
-		st = new SoftAssert();
+		
 		
 		logger = report.startTest("Browser Selection........");
 		
@@ -76,23 +74,32 @@ public class BaseClass {
 	}
 	
 	
-	public static void moduledriver() 
+	public static void moduledriver() throws Exception 
 	{
-		
 		ht = new Hashtable<String,String>();
-		xls = new ShineXlsReader(System.getProperty("user.dir")+"\\Test_IP_OP\\ModuleDriver.xlsx");
-		int Module_count = xls.getRowCount("Module");
-		for (int i =2;i<=Module_count;i++) {
-			String Module_name = xls.getCellData("Module", 0, i);
-			String Module_Exests = xls.getCellData("Module", 1, i);
-			
+		src = new File("./Test_IP_OP/ModuleDriver.xlsx");
+		fis=new FileInputStream(src);
+		XSSFWorkbook wb=new XSSFWorkbook(fis);
+		XSSFSheet sh= wb.getSheet("Module");
+		System.out.println("module sheet is : " +sh.getSheetName());
+		int Module_count = sh.getLastRowNum();
+		System.out.println("Total number of modules are : "+Module_count );
+		
+			for (int i=1;i<=Module_count;i++) {
+				
+				String Module_name = sh.getRow(i).getCell(0).getStringCellValue();
+				String  Module_Exests = sh.getRow(i).getCell(1).getStringCellValue();
+						
+					
 			if(Module_Exests.equalsIgnoreCase("Yes"))
 			{
-				int Testcases = xls.getRowCount(Module_name);
-				for(int j=2;j<=Testcases;j++)
+				XSSFSheet sh_curr= wb.getSheet(Module_name);
+				System.out.println("Current sheet is : " + sh_curr.getSheetName());
+				int Testcases = sh_curr.getLastRowNum();
+				for(int j=1;j<=Testcases;j++)
 				{ 	 	 	 	
-					String Testcase_name = xls.getCellData(Module_name, 0, j);
-					String Testcase_Exests = xls.getCellData(Module_name, 1, j);
+					String Testcase_name = sh_curr.getRow(j).getCell(0).getStringCellValue();
+					String Testcase_Exests = sh_curr.getRow(j).getCell(1).getStringCellValue();
 					
 					ht.put(Testcase_name, Testcase_Exests);
 					
